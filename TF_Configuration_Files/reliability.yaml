@@ -1,0 +1,18 @@
+flavors:
+  - name: "Low Reliability"
+    score_range: [1.0, 40.0]
+    resource_requirements:
+      cpu: "0.5"
+      memory: "512Mi"
+
+  - name: "Medium Reliability"
+    score_range: [41.0, 80.0]
+    resource_requirements:
+      cpu: "1.0"
+      memory: "1Gi"
+
+  - name: "High Reliability"
+    score_range: [81.0, 100.0]
+    resource_requirements:
+      cpu: "2.0"
+      memory: "2Gi"
