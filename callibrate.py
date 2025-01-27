@@ -1,5 +1,6 @@
 import yaml
 import requests
+from pyswip import Prolog
 
 def load_config(config_file):
     """
@@ -84,6 +85,23 @@ def calibrate_scores(scores, config, available_cpu, available_memory):
 
     return calibrated_flavors
 
+def load_prolog_knowledge(base_file):
+    prolog = Prolog()
+    prolog.consult(base_file)
+    return prolog
+
+def get_flavor(prolog, score, cpu, memory):
+    query = list(prolog.query(f"assign_flavor({score}, {cpu}, {memory}, Flavor)"))
+    if query:
+        return query[0]["Flavor"]
+
+    # Fallback logic
+    fallback_query = list(prolog.query(f"fallback_flavor({cpu}, {memory}, Flavor)"))
+    if fallback_query:
+        return fallback_query[0]["Flavor"]
+
+    return "Insufficient Resources"
+
 if __name__ == "__main__":
     # Example configuration file
     config_file = "/home/ilias/Desktop/safe-6g/Cognitive/Code/repo/Cognitive_Coordinator/TF_Configuration_Files/reliability.yaml"
@@ -91,7 +109,8 @@ if __name__ == "__main__":
     token = "eyJhbGciOiJSUzI1NiIsInR5cCIgOiAiSldUIiwia2lkIiA6ICJzaTcxSzNkUm11UFIxY2RhT2daNVFtbGpUVlR6U3JQM0cyYlZNdEVDeUVjIn0.eyJleHAiOjE4MDk0MjgwMDMsImlhdCI6MTcyMzExNDQwMywianRpIjoiMzI4OTdiMWEtNjFjMy00Yzk0LTkwN2QtZDg0Y2Y1NTQwOTNhIiwiaXNzIjoiaHR0cHM6Ly9rZXljbG9hay5jZi1tdnAtZG9tYWluLmFlcm9zLXByb2plY3QuZXUvYXV0aC9yZWFsbXMva2V5Y2xvYWNrLW9wZW5sZGFwIiwiYXVkIjoiYWNjb3VudCIsInN1YiI6IjU5MzMyMDg2LTA0YzgtNGFiZS1iY2JiLWEyZjMzMmM3M2FmYSIsInR5cCI6IkJlYXJlciIsImF6cCI6ImFlcm9zLXRlc3QiLCJzZXNzaW9uX3N0YXRlIjoiN2YyOWMyMzEtMWY2Zi00YzNkLThhMDEtMjVmZjVmMjMwNDA2IiwiYWNyIjoiMSIsInJlYWxtX2FjY2VzcyI6eyJyb2xlcyI6WyJDbG91ZEZlcnJvRG9tYWluIiwiZGVmYXVsdC1yb2xlcy1rZXljbG9hY2stb3BlbmxkYXAiLCJvZmZsaW5lX2FjY2VzcyIsInVtYV9hdXRob3JpemF0aW9uIiwiRG9tYWluIGFkbWluaXN0cmF0b3IiXX0sInJlc291cmNlX2FjY2VzcyI6eyJhY2NvdW50Ijp7InJvbGVzIjpbIm1hbmFnZS1hY2NvdW50IiwibWFuYWdlLWFjY291bnQtbGlua3MiLCJ2aWV3LXByb2ZpbGUiXX19LCJzY29wZSI6InByb2ZpbGUgZW1haWwiLCJzaWQiOiI3ZjI5YzIzMS0xZjZmLTRjM2QtOGEwMS0yNWZmNWYyMzA0MDYiLCJlbWFpbF92ZXJpZmllZCI6ZmFsc2UsIm5hbWUiOiJEb21haW4gYWRtaW5pc3RyYXRvciAxIEFkbWluIiwicHJlZmVycmVkX3VzZXJuYW1lIjoiZG9tYWluYWRtaW5pc3RyYXRvcjEiLCJnaXZlbl9uYW1lIjoiRG9tYWluIGFkbWluaXN0cmF0b3IgMSIsImZhbWlseV9uYW1lIjoiQWRtaW4ifQ.dF3CS5Wq23YB2sbc2-epH4QLhN9Y9JGuqW7aQ5x0mGgM4v_bkmycXnceuKohVxgSreSq5jJ-m7P38-HGfX0GoLDiSENqlw8SzMyKmjlFuu5rreXIbskI3GKqbfGog4ZR8ojTCCfbfwgdZsvc_XFZRnrsC_nFuHe2AiD3ypWPFnEY9edvzG-oWC414hvIHGLdVAXqLthWJe65s1QfOWrn70lvBuszHDg48iec_zv0Us5u8yeYXahO8Tf7FrQ4CgGuocS2vn55ENQgLDs03E01m6CWPlANhgJKEfziPGCxRuYKIDNZOrvhIF-ZsMEsrt95jg-qeskqkdA2dWzbJwM5Sw"
 
     # Load configuration
-    config = load_config(config_file)
+    #config = load_config(config_file)
+    prolog = load_prolog_knowledge("TF_Configuration_Files/reliability.pl")
 
     # Fetch available resources
     resources = get_available_resources(api_url, token)
@@ -111,16 +130,26 @@ if __name__ == "__main__":
     best_resource = resources_sorted[0]
     available_cpu = best_resource['available_cpu']
     available_memory = best_resource['available_memory']
-
+    #available_memory = '600'
     print(f"\nUsing best resource: Hostname: {best_resource['hostname']}, CPU: {available_cpu:.2f}, Memory: {available_memory}")
 
     # Example inputs
     scores = [35, 45, 85, 15, 95]
 
     # Calibrate scores
-    results = calibrate_scores(scores, config, available_cpu, available_memory)
-
+    #results = calibrate_scores(scores, config, available_cpu, available_memory)
+    
     # Output results
-    for score, flavor in zip(scores, results):
-        print(f"Score: {score}, Assigned Flavor: {flavor}")
+    # for score, flavor in zip(scores, results):
+    #     print(f"Score: {score}, Assigned Flavor: {flavor}")
 
+    # Convert available_memory to MB once
+    if available_memory.endswith('Gi'):
+        available_memory = float(available_memory.replace('Gi', '')) * 1024
+    elif available_memory.endswith('Mi'):
+        available_memory = float(available_memory.replace('Mi', ''))
+
+    # Process scores
+    for score in scores:
+        flavor = get_flavor(prolog, score, available_cpu, available_memory)
+        print(f"Score: {score}, Assigned Flavor: {flavor}")
