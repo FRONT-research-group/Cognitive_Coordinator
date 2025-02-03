@@ -136,13 +136,6 @@ if __name__ == "__main__":
     # Example inputs
     scores = [35, 45, 85, 15, 95]
 
-    # Calibrate scores
-    #results = calibrate_scores(scores, config, available_cpu, available_memory)
-    
-    # Output results
-    # for score, flavor in zip(scores, results):
-    #     print(f"Score: {score}, Assigned Flavor: {flavor}")
-
     # Convert available_memory to MB once
     if available_memory.endswith('Gi'):
         available_memory = float(available_memory.replace('Gi', '')) * 1024

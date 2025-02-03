@@ -9,14 +9,18 @@ Cognitive Coordinator source code within the SAFE-6G project
 - [Callibrate](#callibrate)
 
 ## Installation
+- SWI-Prolog version 8.4.2
 
+```bash
+sudo apt install swi-prolog
+```
+- Clone repo:
 ```bash
 git clone https://github.com/FRONT-research-group/Cognitive_Coordinator.git
 ```
 
 ## Usage
 - Python 3.10.12
-- SWI-Prolog version 8.4.2
 
 ```bash
 cd Cognitive_Coordinator
