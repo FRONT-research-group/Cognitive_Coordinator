@@ -168,6 +168,6 @@ output/*
 
 *.csv
 
-.pth
+*.pth
 
 trained_models/
