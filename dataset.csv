@@ -1,0 +1,143 @@
+Keywords,Score,Class
+reliable application,"1,40",Reliability
+issue alerts,"1,40",Reliability
+low complexity,"1,40",Reliability
+fast algorithms,"1,40",Reliability
+machine learning,"1,40",Reliability
+reliable service,"1,40",Reliability
+device monitoring,"1,40",Reliability
+data analysis,"1,40",Reliability
+guarantee QoS,"1,40",Reliability
+plane monitoring,"1,40",Reliability
+sufficient accuracy,"1,40",Reliability
+high reliability,"41,80",Reliability
+seamless operation,"41,80",Reliability
+deep neural networks,"41,80",Reliability
+maintain high QoS,"41,80",Reliability
+ensure high QoE,"41,80",Reliability
+issue multiple alerts,"41,80",Reliability
+monitor various planes,"41,80",Reliability
+monitor various devices,"41,80",Reliability
+high accuracy,"41,80",Reliability
+medium complexity,"41,80",Reliability
+complex algorithms,"41,80",Reliability
+federated learning,"81,100",Reliability
+malicious actions detection,"81,100",Reliability
+very high accuracy,"81,100",Reliability
+high complexity,"81,100",Reliability
+very complex algorithms,"81,100",Reliability
+secure and reliable application,"81,100",Reliability
+sophisticated ML algorithms,"81,100",Reliability
+ensure secure operation,"81,100",Reliability
+security threats,"81,100",Reliability
+Security Profiling,"81,100",Reliability
+user data,"1,60",Privacy
+login details,"1,60",Privacy
+browser history,"1,60",Privacy
+cookie preferences,"1,60",Privacy
+email address,"1,60",Privacy
+location data,"1,60",Privacy
+contact details,"1,60",Privacy
+session tracking,"1,60",Privacy
+social media information,"1,60",Privacy
+device ID,"1,60",Privacy
+encryption,"61,80",Privacy
+data anonymization,"61,80",Privacy
+privacy policy,"61,80",Privacy
+user consent,"61,80",Privacy
+access control,"61,80",Privacy
+data retention policy,"61,80",Privacy
+data minimization,"61,80",Privacy
+data masking,"61,80",Privacy
+third-party sharing,"61,80",Privacy
+data portability,"61,80",Privacy
+multi-factor authentication,"81,100",Privacy
+end-to-end encryption,"81,100",Privacy
+biometric data protection,"81,100",Privacy
+cybersecurity compliance,"81,100",Privacy
+GDPR adherence,"81,100",Privacy
+data breach response,"81,100",Privacy
+zero-trust architecture,"81,100",Privacy
+data sovereignty,"81,100",Privacy
+data integrity,"81,100",Privacy
+personal data encryption,"81,100",Privacy
+data encryption,"80,100",Security
+password protection," 60,90",Security
+network firewall," 70,95",Security
+virus scanning," 50,85",Security
+access control," 65,90",Security
+identity verification,"75,100",Security
+secure login," 70,95",Security
+malware detection," 60,90",Security
+security audit," 50,80",Security
+two-factor authentication,"80,100",Security
+secure communication ," 70,95",Security
+cyber threat ,"80,100",Security
+data breach ,"90,100",Security
+system hardening ," 60,85",Security
+risk assessment ," 50,75",Security
+incident response ," 70,95",Security
+user authentication ," 65,90",Security
+secure coding ," 60,85",Security
+phishing attack ," 50,80",Security
+privacy settings ," 55,85",Security
+intrusion prevention ," 75,95",Security
+security policy ," 50,80",Security
+compliance check ," 50,75",Security
+security awareness ," 40,70",Security
+penetration testing ," 65,90",Security
+firewall rules ,"60,85",Security
+encryption keys ,"80,100",Security
+secure storage ,"70,95",Security
+threat analysis ,"60,85",Security
+vulnerability scanning ,"50,80",Security
+load balancing,"1,33",Resilience
+congestion monitoring,"1,33",Resilience
+threshold alerting,"1,33",Resilience
+basic traffic rerouting,"1,33",Resilience
+resource reservation,"1,33",Resilience
+traffic prioritization,"34,67",Resilience
+adaptive quality of service (QoS),"34,67",Resilience
+redundancy allocation,"34,67",Resilience
+service continuity check,"34,67",Resilience
+latency monitoring,"34,67",Resilience
+dynamic bandwidth adjustment,"34,67",Resilience
+predictive load distribution,"68,100",Resilience
+advanced traffic rerouting,"68,100",Resilience
+AI-driven capacity planning,"68,100",Resilience
+proactive fault recovery,"68,100",Resilience
+resilient infrastructure scaling,"68,100",Resilience
+intelligent load shedding,"68,100",Resilience
+multi-path failover,"68,100",Resilience
+real-time resource optimization,"68,100",Resilience
+resilience state forecasting,"68,100",Resilience
+automated service restoration,"68,100",Resilience
+Basic authorization,"1, 40",Safety
+Basic resources,"1, 40",Safety
+Basic safety link,"1, 40",Safety
+Device validation,"1, 40",Safety
+Entry-level resource isolation,"1, 40",Safety
+Entry-level safety connection,"1, 40",Safety
+Resource segmentation,"1, 40",Safety
+Fundamental device trust,"1, 40",Safety
+Basic-level resource separation,"1, 40",Safety
+Minimal asset segmentation,"1, 40",Safety
+Basic encrypted connection,"1, 40",Safety
+Role-based authorization,"41, 70",Safety
+Standard resources,"41, 70",Safety
+Enhanced safety link,"41, 70",Safety
+Dynamic resource isolation,"41, 70",Safety
+Intermediate safety connection,"41, 70",Safety
+Resource partitioning,"41, 70",Safety
+Advanced device trust,"41, 70",Safety
+Dynamic segmentation,"41, 70",Safety
+Intermediate encrypted connection,"41, 70",Safety
+Zero-trust authorization,"71, 100",Safety
+Critical resources,"71, 100",Safety
+Advanced safety link,"71, 100",Safety
+Adaptive resource isolation,"71, 100",Safety
+High-security safety connection,"71, 100",Safety
+Comprehensive resource segmentation,"71, 100",Safety
+Full device trust validation,"71, 100",Safety
+Advanced asset segmentation,"71, 100",Safety
+Advanced encrypted connection,"71, 100",Safety
